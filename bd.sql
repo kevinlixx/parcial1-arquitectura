@@ -1,7 +1,7 @@
 
-CREATE DATABASE MiBaseDeDatos;
+CREATE DATABASE gapVotacion;
 
-USE MiBaseDeDatos;
+USE gapVotacion;
 
 CREATE TABLE admin (
     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -11,8 +11,9 @@ CREATE TABLE admin (
 
 CREATE TABLE candidato (
     id INT PRIMARY KEY AUTO_INCREMENT,
-    nombre VARCHAR(255),
-    apellido VARCHAR(255)
+    nombre VARCHAR(20),
+    apellido VARCHAR(20),
+    Votos INT(20)
 );
 
 CREATE TABLE estudiante (
