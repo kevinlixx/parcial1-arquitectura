@@ -1,0 +1,24 @@
+:root {
+    --primary-100:#FF7F50;
+    --primary-200:#dd6236;
+    --primary-300:#8f1e00;
+    --accent-100:#8B4513;
+    --accent-200:#ffd299;
+    --text-100:#000000;
+    --text-200:#2c2c2c;
+    --bg-100:#F7EEDD;
+    --bg-200:#ede4d3;
+    --bg-300:#c4bcab;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'DM Sans', sans-serif;
+    min-width: 240px;
+}
