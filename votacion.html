@@ -39,7 +39,7 @@
     </main>
     <footer class="pie-pagina">
         <div class="footer_copy">
-            <small>&copy; 2023 <b>GAPVotación</b> - Todos los Derechos Reservados - Kevin Lis, David Yazo, Juan Montaño</small>
+            <small>&copy; 2024 <b>GAPVotación</b> - Todos los Derechos Reservados - Kevin Lis, David Yazo, Juan Montaño</small>
         </div>
         </footer>
     <script src="js/script.js"></script>

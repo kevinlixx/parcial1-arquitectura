@@ -206,8 +206,17 @@ header .menu-header {
 }
 
 /* main */
-.input--inicio {
+main{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+    min-width: 320px;
+    height: 70vh;
+}
+.input--inicio {
     margin-top: 20px;
     padding: 10px;
     border: none;
@@ -216,7 +225,54 @@ header .menu-header {
     outline: none;
 }
 
+.container-join{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 42vh;
+    width: 100%;
+}
 
+.join--border{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 23px;
+    border: solid var(--primary-100);
+    border-radius: 50px;
+}
+
+.title-colored {
+    font-size: 3.5rem;
+    font-weight: 300px;
+    margin-bottom: 20px;
+    /* Centra el texto */
+    text-align: center;
+    /* Ajusta las palabras largas */
+    word-wrap: break-word;
+    /* Propiedad de gradiante para establecer la combinación de colores para el titulo */
+    background: linear-gradient(90deg, var(--accent-100), var(--primary-100), var(--accent-200));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: changeColor 5s linear infinite;
+    /* Añade un subrayado al texto */
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.input--button{
+    margin-top: 30px;
+    padding: 10px;
+    border: none;
+    background: #FF7F50;
+    font-size: 16px;
+    outline: none;
+    color: white;
+    cursor: pointer;
+}
 /* para el footer */
 .pie-pagina {
     position: relative;
