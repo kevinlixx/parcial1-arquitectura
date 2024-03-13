@@ -34,7 +34,18 @@ INSERT INTO `candidato` (`nombre`, `apellido`) VALUES
 ('Maria', 'Lopez'),
 ('Pedro', 'Gomez');
 
+-- Actualizar el nombre y apellido del candidato con ID 1
+UPDATE candidato SET nombre = 'Rintaro', apellido = 'Okabe' WHERE id = 1;
+
+-- Actualizar el nombre y apellido del candidato con ID 2
+UPDATE candidato SET nombre = 'Shinichi', apellido = 'Izumi' WHERE id = 2;
+
+-- Actualizar el nombre y apellido del candidato con ID 3
+UPDATE candidato SET nombre = 'Pain', apellido = 'Nagato' WHERE id = 3;
+
+
 SELECT * FROM `candidato`;
+
 
 --
 -- 3. Estructura de tabla para la tabla `estudiante`
