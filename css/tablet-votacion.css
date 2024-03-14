@@ -1,0 +1,67 @@
+:root {
+    --primary-100:#FF7F50;
+    --primary-200:#dd6236;
+    --primary-300:#8f1e00;
+    --accent-100:#8B4513;
+    --accent-200:#ffd299;
+    --text-100:#000000;
+    --text-200:#2c2c2c;
+    --bg-100:#F7EEDD;
+    --bg-200:#ede4d3;
+    --bg-300:#c4bcab;
+}
+/* CSS de las cosas jejejej */
+#titulo {
+    font-size: 3rem; /* Tamaño del texto */
+    text-align: center; /* Alineación centrada */
+    color: var(--text-100); /* Color del texto */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+/* CSS para tabletas */
+@media only screen and (max-width: 799px) {
+    /* Estilos para el título */
+    #titulo {
+        font-size: 2.5rem; /* Tamaño del título */
+    }
+
+    /* Estilos para los candidatos */
+    #candidato {
+        display: flex;
+        flex-wrap: wrap; /* Permitir que los elementos se envuelvan en filas */
+        justify-content: space-between; /* Espacio entre los elementos */
+       
+    }
+
+    .candidato {
+        width: 48%; /* Ancho de cada candidato */
+        margin-bottom: 20px; /* Espacio entre los candidatos */
+        text-align: center; /* Centra el contenido horizontalmente */
+        position: relative; /* Establece la posición relativa para el contenedor */
+    }
+
+    /* Estilos para las imágenes */
+    .candidato img {
+        width: 100%; /* Ancho máximo de las imágenes */
+        border-radius: 8px; /* Bordes redondeados */
+    }
+
+    /* Estilos para los nombres de los candidatos */
+    .candidato h3 {
+        font-size: 1.8rem; /* Tamaño del nombre del candidato */
+        margin-bottom: 10px; /* Espacio inferior entre el nombre del candidato y la imagen */
+    }
+
+    /* Estilos para los botones */
+    .candidato button {
+        width: 100%; /* Ancho máximo de los botones */
+        margin-top: 10px; /* Espacio entre la imagen y el botón */
+    }
+}
+
+
+
+
+
+
+

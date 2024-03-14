@@ -1,11 +1,14 @@
 :root {
-    --turquoise: #568281;
-    --font-color: #FFFFFF;
-    --section-color: #D3E1E1;
-    --beige: #d6c19d;
-    --black: #000000;
-    --orange: #fdb249;
-    --hour_turquoise: #20D2C8;
+    --primary-100:#FF7F50;
+    --primary-200:#dd6236;
+    --primary-300:#8f1e00;
+    --accent-100:#8B4513;
+    --accent-200:#ffd299;
+    --text-100:#000000;
+    --text-200:#2c2c2c;
+    --bg-100:#F7EEDD;
+    --bg-200:#ede4d3;
+    --bg-300:#c4bcab;
 }
 
 * {
@@ -150,4 +153,111 @@ header .menu-section {
 .text ul {
     font-size: 20px;
     margin-top: 5%;
+}
+
+/* CSS de las cosas jejejej */
+#titulo {
+    font-size: 3rem; /* Tamaño del texto */
+    text-align: center; /* Alineación centrada */
+    color: var(--text-100); /* Color del texto */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+
+#candidato {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#candidato h3 {
+    font-size: 2rem; /* Tamaño de fuente del h3 */
+    text-align: center; /* Centrar el texto horizontalmente */
+    margin-bottom: 5px; /* Espacio inferior entre el h3 y la imagen */
+}
+
+
+.candidato div {
+    text-align: center; /* Centra el contenido horizontalmente */
+    position: relative; /* Establece la posición relativa para el contenedor */
+}
+
+
+.candidato1,
+.candidato2,
+.candidato3,
+.candidatoblanco {
+    flex-basis: 25%;
+    text-align: center;
+    margin-bottom: 30px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.candidato1 img,
+.candidato2 img,
+.candidato3 img,
+.candidatoblanco img  {
+    max-width: 90%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+.candidato1 button,
+.candidato2 button,
+.candidato3 button,
+.candidatoblanco button {
+    background-color: var(--accent-100);
+    color: var(--bg-100);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.candidato1 button:hover,
+.candidato2 button:hover,
+.candidato3 button:hover,
+.candidatoblanco button:hover {
+    background-color: var(--accent-200);
+    color: var(--text-100);
+}
+/* CSS para tabletas */
+
+/* Ajustes generales */
+
+/* Ajustes específicos para tabletas */
+@media screen and (max-width: 1024px) {
+    /* Encabezado */
+    header .menu-section {
+        justify-content: center; /* Centrar los elementos del menú */
+    }
+
+    .menu #btn_menu {
+        display: block; /* Mostrar el botón del menú */
+    }
+
+    .menu-section {
+        width: auto; /* Ajustar el ancho del menú */
+    }
+
+    .menu-section li {
+        margin-right: 15px; /* Espacio entre elementos del menú */
+    }
+
+    /* Candidatos */
+    #candidato {
+        flex-wrap: wrap; /* Permitir que los elementos se envuelvan en filas */
+    }
+
+    .candidato1,
+    .candidato2,
+    .candidato3,
+    .candidatoblanco {
+        flex-basis: 45%; /* Ancho de los candidatos */
+        margin-bottom: 20px; /* Espacio inferior entre los candidatos */
+    }
 }

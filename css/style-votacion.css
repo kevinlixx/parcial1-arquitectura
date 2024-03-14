@@ -224,3 +224,62 @@ header .menu-header {
 .pie-pagina .footer_copy small {
     font-size: 15px;
 }
+
+/* CSS para dispositivos móviles */
+@media only screen and (max-width: 799px) {
+    /* Ajustes para los candidatos */
+    #candidato {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .candidato1,
+    .candidato2,
+    .candidato3,
+    .candidatoblanco {
+        width: 80%; /* Ancho ajustado */
+        margin-bottom: 20px;
+        text-align: center; /* Centrar el contenido horizontalmente */
+    }
+
+    .candidato1 img,
+    .candidato2 img,
+    .candidato3 img,
+    .candidatoblanco img {
+        width: 100%; /* Ancho ajustado */
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .candidato1 h3,
+    .candidato2 h3,
+    .candidato3 h3,
+    .candidatoblanco h3 {
+        font-size: 2rem; /* Tamaño de fuente ajustado */
+    }
+
+    .candidato1 button,
+    .candidato2 button,
+    .candidato3 button,
+    .candidatoblanco button {
+        background-color: var(--accent-100);
+        color: var(--bg-100);
+        border: none;
+        padding: 10px 20px;
+        font-size: 2rem;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+    }
+
+    .candidato1 button:hover,
+    .candidato2 button:hover,
+    .candidato3 button:hover,
+    .candidatoblanco button:hover {
+        background-color: var(--accent-200);
+        color: var(--text-100);
+    }
+}
+
+
+

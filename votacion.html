@@ -35,13 +35,38 @@
     <!-- Monta- seleccionar candidato -->
     <!-- - NO PUEDE REPETIR VOTO CON EL MISMO ID -->
     <main>
-
+        <h2 id="titulo">Elige tu opción</h2>
+        <section id="candidato">
+            <div class="candidato1">
+                <h3>Shinichi Izumi</h3>
+                <img src='https://i.postimg.cc/prqK7zCz/imagen-2024-03-14-122808308.png' border='0' alt='imagen-2024-03-14-122808308'/>
+                <button onclick="vote('opcion1')">Votar</button>
+            </div>
+            <div class="candidato2">
+                <h3>Rintaro Okabe</h3>
+                <img src='https://i.postimg.cc/9Fz9dZTP/imagen-2024-03-10-142557607.png' border='0' alt='imagen-2024-03-10-142557607'/>
+                <button onclick="vote('opcion2')">Votar</button>
+            </div>
+            <div class="candidato3">
+                <h3>Pain Nagato</h3>
+                <img src='https://i.postimg.cc/ZR78mcpR/imagen-2024-03-10-143416333.png' border='0' alt='imagen-2024-03-10-143416333'/>
+                <button onclick="vote('opcion3')">Votar</button>
+            </div>
+            <div class="candidatoblanco">
+                <h3>Voto en Blanco</h3>
+                <img src='https://i.postimg.cc/L4L5LT4y/imagen-2024-03-13-093707904.png' border='0' alt='imagen-2024-03-13-093707904'/>
+                <button onclick="vote('opcion4')">Votar</button>
+            </div>
+        </section>
     </main>
+    
+    
+    
+    
     <footer class="pie-pagina">
         <div class="footer_copy">
-            <small>&copy; 2023 <b>GAPVotación</b> - Todos los Derechos Reservados - Kevin Lis, David Yazo, Juan Montaño</small>
+            <small>&copy; 2024 <b>GAPVotación</b> - Todos los Derechos Reservados - Kevin Lis, David Yazo, Juan Montaño</small>
         </div>
         </footer>
-    <script src="js/script.js"></script>
 </body>
 </html>
