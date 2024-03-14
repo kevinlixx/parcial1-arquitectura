@@ -16,10 +16,3 @@ function ocultar_menu(){
     background_menu.style.display = "none";
 }
 
-// BOTON PARA LA ALERTA
-function vote(opcion) {
-    // Aquí puedes agregar el código para registrar el voto
-    
-    // Mostrar el mensaje de agradecimiento
-    alert('¡Gracias por tu voto!');
-}

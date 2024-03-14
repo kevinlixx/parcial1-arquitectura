@@ -225,11 +225,7 @@ header .menu-section {
     background-color: var(--accent-200);
     color: var(--text-100);
 }
-/* CSS para tabletas */
 
-/* Ajustes generales */
-
-/* Ajustes específicos para tabletas */
 @media screen and (max-width: 1024px) {
     /* Encabezado */
     header .menu-section {
@@ -261,3 +257,4 @@ header .menu-section {
         margin-bottom: 20px; /* Espacio inferior entre los candidatos */
     }
 }
+

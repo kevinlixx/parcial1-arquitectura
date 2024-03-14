@@ -205,6 +205,75 @@ header .menu-header {
 
 /* main */
 
+/* CSS para dispositivos móviles */
+@media only screen and (max-width: 599px) {
+    /* Ajustes para los candidatos */
+    #candidato {
+        flex-direction: column;
+        align-items: center;
+    }
+    #titulo {
+        font-size: 2.2rem; /* Tamaño del texto */
+        text-align: center; /* Alineación centrada */
+        color: var(--text-100); /* Color del texto */
+        margin-bottom: 20px; /* Espacio inferior */
+    }
+    .candidato1,
+    .candidato2,
+    .candidato3,
+    .candidatoblanco {
+        width: 100%; /* Ancho ajustado para ocupar todo el ancho disponible */
+        margin-bottom: 20px;
+        text-align: center; /* Centrar el contenido horizontalmente */
+    }
+
+    .candidato-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .candidato1 img,
+    .candidato2 img,
+    .candidato3 img,
+    .candidatoblanco img {
+        width: 59%; /* Ancho ajustado */
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .candidato1 h3,
+    .candidato2 h3,
+    .candidato3 h3,
+    .candidatoblanco h3 {
+        font-size: 1.8rem; /* Tamaño de fuente ajustado */
+    }
+
+    .candidato1 button,
+    .candidato2 button,
+    .candidato3 button,
+    .candidatoblanco button {
+        background-color: var(--accent-100);
+        color: var(--bg-100);
+        border: none;
+        padding: 10px 20px;
+        font-size: 2rem;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+        margin-top: 10px; /* Espacio entre la imagen y el botón */
+    }
+
+    .candidato1 button:hover,
+    .candidato2 button:hover,
+    .candidato3 button:hover,
+    .candidatoblanco button:hover {
+        background-color: var(--accent-200);
+        color: var(--text-100);
+    }
+}
+
+
 /* para el footer */
 .pie-pagina {
     position: relative;
@@ -225,61 +294,6 @@ header .menu-header {
     font-size: 15px;
 }
 
-/* CSS para dispositivos móviles */
-@media only screen and (max-width: 799px) {
-    /* Ajustes para los candidatos */
-    #candidato {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .candidato1,
-    .candidato2,
-    .candidato3,
-    .candidatoblanco {
-        width: 80%; /* Ancho ajustado */
-        margin-bottom: 20px;
-        text-align: center; /* Centrar el contenido horizontalmente */
-    }
-
-    .candidato1 img,
-    .candidato2 img,
-    .candidato3 img,
-    .candidatoblanco img {
-        width: 100%; /* Ancho ajustado */
-        height: auto;
-        border-radius: 8px;
-    }
-
-    .candidato1 h3,
-    .candidato2 h3,
-    .candidato3 h3,
-    .candidatoblanco h3 {
-        font-size: 2rem; /* Tamaño de fuente ajustado */
-    }
-
-    .candidato1 button,
-    .candidato2 button,
-    .candidato3 button,
-    .candidatoblanco button {
-        background-color: var(--accent-100);
-        color: var(--bg-100);
-        border: none;
-        padding: 10px 20px;
-        font-size: 2rem;
-        cursor: pointer;
-        border-radius: 8px;
-        transition: background-color 0.3s ease;
-    }
-
-    .candidato1 button:hover,
-    .candidato2 button:hover,
-    .candidato3 button:hover,
-    .candidatoblanco button:hover {
-        background-color: var(--accent-200);
-        color: var(--text-100);
-    }
-}
 
 
 
