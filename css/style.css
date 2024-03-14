@@ -93,13 +93,13 @@ header .figure_header {
 }
 
 .menu ul li a:hover {
-    color: var(--sandy);
+    color: var(--primary-300);
     margin-left: 3rem;
 }
 
 #selected {
     background: transparent;
-    border: 2px solid var(--accent-200);
+    border: 2px solid var(--primary-300);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     padding: 12px;
     border-radius: 50px;
@@ -121,9 +121,9 @@ header .figure_header {
     top: 0;
     right: -250px;
     background: var(--accent-200);
-    height: 100vh;
+    height: 60vh;
     padding: 40px;
-    z-index: 1;
+    z-index: 2;
     transition: all 300ms;
 }
 
@@ -142,7 +142,7 @@ header .figure_header {
 }
 
 .menu ul li a {
-    color: var(--fountain);
+    color: var(--text-100);
 }
 
 
@@ -206,8 +206,17 @@ header .menu-header {
 }
 
 /* main */
-.input--inicio {
+main{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+    min-width: 320px;
+    height: 70vh;
+}
+.input--inicio {
     margin-top: 20px;
     padding: 10px;
     border: none;
@@ -216,6 +225,158 @@ header .menu-header {
     outline: none;
 }
 
+.container-join{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 42vh;
+    width: 100%;
+}
+
+.join--border{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 23px;
+    border: solid var(--primary-100);
+    border-radius: 50px;
+}
+
+.title-colored {
+    font-size: 3.5rem;
+    font-weight: 300px;
+    margin-bottom: 20px;
+    /* Centra el texto */
+    text-align: center;
+    /* Ajusta las palabras largas */
+    word-wrap: break-word;
+    /* Propiedad de gradiante para establecer la combinación de colores para el titulo */
+    background: linear-gradient(90deg, var(--accent-100), var(--primary-100), var(--accent-200));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: changeColor 5s linear infinite;
+    /* Añade un subrayado al texto */
+    position: relative;
+    overflow: hidden;
+}
+
+.input--button{
+    margin-top: 30px;
+    padding: 10px;
+    border: none;
+    background: #FF7F50;
+    font-size: 16px;
+    outline: none;
+    color: white;
+    cursor: pointer;
+}
+
+.form--inicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-caja {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    justify-content: center;
+    display: grid;
+    margin-top: 4rem;
+    max-width: 320px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+.container-caja a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+.caja {
+    height: 216px;
+    padding: 20px;
+    margin: 20px;
+    background: rgb(244, 242, 242);
+    /* box-shadow: 1.5px 1.5px 1.5px 1.5px black; */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    transition: 300ms;
+}
+.caja:hover {
+    transform: translate(5px, -5px);
+    box-shadow: -10px 10px 20px -10px rgb(0, 0, 0, 0.5);
+} 
+
+.caja .icon,
+.caja h4,
+.caja p {
+position: relative; /* para que funcione la animación y se ponga por encima*/
+z-index: 1; /* para que se ponga encima de todo */
+transition: all 300ms;
+}
+.caja .icon {
+    font-size: 40px;
+    color: rgb(160, 121, 95);
+    transform: translatey(30px);
+  }
+  
+  .caja:hover .icon {
+    color: #ffffff;
+    font-size: 30px;
+    transform: translateY(0);
+  }
+
+
+.caja h4,
+.caja p {
+  margin-top: 10 px;
+}
+.caja h4 {
+    font-size: 30px;
+    transform: translatey(30px);
+}
+
+.caja:hover h4 {
+    transform: translateY(0);
+    color: white;
+}
+
+.caja p {
+    font-size: 14px;
+    transform: translatey(100px); /* moverlo 100px en el eje y */
+    opacity: 0;
+}
+
+.caja:hover p {
+    transform: translateY(0);
+    opacity: 1;
+    color: white;
+}
+
+.caja .animacion {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 250px;
+    left: -170px;
+    border-radius: 100%;
+    transition: all 300ms;
+    background: linear-gradient(to bottom, #995c06, #fdb249);
+}
+.caja:hover .animacion {
+    /* para que cuando se pasa el mouse realice la animación */
+    width: 40rem;
+    height: 40rem;
+    top: -150px;
+    left: -70px;
+}
 
 /* para el footer */
 .pie-pagina {

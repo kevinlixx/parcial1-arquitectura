@@ -13,7 +13,6 @@ CREATE TABLE candidato (
     id INT PRIMARY KEY AUTO_INCREMENT,
     nombre VARCHAR(20),
     apellido VARCHAR(20),
-    Votos INT(20)
 );
 
 CREATE TABLE estudiante (
@@ -23,5 +22,13 @@ CREATE TABLE estudiante (
     grado VARCHAR(255)
 );
 
+CREATE TABLE votacion (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    estudianteId INT,
+    candidatoId INT,
+    fecha DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (estudianteId) REFERENCES estudiante(id),
+    FOREIGN KEY (candidatoId) REFERENCES candidato(id)
+);
 
 
