@@ -13,4 +13,16 @@ if (mysqli_connect_errno()) {
 }else{
     echo "Conexión exitosa";
 }
+class conexion
+{
+    public static function conectar(){
+        $user = "root";
+        $pass = "";
+        $host = "localhost";
+        $bd = "gapvotacion";
+        // Crear conexión
+        $conection = mysqli_connect($host, $user, $pass, $bd);
+        return $conection; 
+    }
+}
 ?>

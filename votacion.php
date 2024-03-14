@@ -35,6 +35,7 @@
     <!-- Monta- seleccionar candidato -->
     <!-- - NO PUEDE REPETIR VOTO CON EL MISMO ID -->
     <main>
+
         <h2 id="titulo">Elige tu opción</h2>
         <section id="candidato">
             <div class="candidato1">
@@ -72,10 +73,12 @@
     </main>
     
     
+
     <footer class="pie-pagina">
         <div class="footer_copy">
             <small>&copy; 2024 <b>GAPVotación</b> - Todos los Derechos Reservados - Kevin Lis, David Yazo, Juan Montaño</small>
         </div>
+
     </footer>
     <script>
         function vote(opcion) {
