@@ -37,11 +37,12 @@
                  <figure>
                     <img src="https://i.postimg.cc/14Ggx7Rb/logo-GAP.png" alt="logo" class="logo">
                 </figure>
-                <h2 class="title-colored">Iniciar sesión</h2>
-                <input type="email" name="" placeholder="correo electronico" id="" class="input--inicio">
-                <input type="password" name="" placeholder="contraseña" id="" class="input--inicio">
-                <a href=""><input type="button" type="submit" value="iniciar sesión" class="input--button"></a>
-            </div>
+                <h2 class="title-colored">Votación</h2>
+                <form action="./procesos/ingreso_estudiante.php" method="post" class="form--inicio">
+                    <input type="number" name="id" placeholder="ingresa tu ID" id="" class="input--inicio">
+                    <a href=""><input  type="submit" value="votar" class="input--button"></a>
+                </form>
+            </div>  
         </div>
        <!--  login-admin -->
        <!-- - votar

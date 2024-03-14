@@ -272,6 +272,12 @@ main{
     cursor: pointer;
 }
 
+.form--inicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .container-caja {
     display: flex;
     flex-wrap: wrap;
