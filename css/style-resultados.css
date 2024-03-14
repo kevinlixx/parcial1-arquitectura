@@ -1,14 +1,14 @@
 :root {
-    --primary-100:#FF7F50;
-    --primary-200:#dd6236;
-    --primary-300:#8f1e00;
-    --accent-100:#8B4513;
-    --accent-200:#ffd299;
-    --text-100:#000000;
-    --text-200:#2c2c2c;
-    --bg-100:#F7EEDD;
-    --bg-200:#ede4d3;
-    --bg-300:#c4bcab;
+    --primary-100: #FF7F50;
+    --primary-200: #dd6236;
+    --primary-300: #8f1e00;
+    --accent-100: #8B4513;
+    --accent-200: #ffd299;
+    --text-100: #000000;
+    --text-200: #2c2c2c;
+    --bg-100: #F7EEDD;
+    --bg-200: #ede4d3;
+    --bg-300: #c4bcab;
 }
 
 * {
@@ -22,8 +22,9 @@ html {
     font-family: 'DM Sans', sans-serif;
     min-width: 240px;
 }
+
 /*Header*/
-header{
+header {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -93,7 +94,7 @@ header .figure_header {
 }
 
 .menu ul li a:hover {
-    color:  var(--text-100);
+    color: var(--text-100);
     margin-left: 3rem;
 }
 
@@ -121,7 +122,8 @@ header .figure_header {
     position: fixed;
     top: 0;
     right: -250px;
-    background-color: var(--bg-100);;
+    background-color: var(--bg-100);
+    ;
     height: 100vh;
     padding: 40px;
     z-index: 1;
@@ -204,19 +206,143 @@ header .menu-header {
 }
 
 /* main */
-.progress {
-    background-color: #f3f3f3;
-    border-radius: 4px;
-    height: 20px;
+.div--container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2px;
+    height: auto;
+    width: auto;
+    margin: 10px;
+    margin-top: 1%;
+}
+
+.text-colored {
+    font-size: 40px;
+    font-weight: 300px;
+    /* Centra el texto */
+    text-align: center;
+    /* Ajusta las palabras largas */
+    word-wrap: break-word;
+    /* Propiedad de gradiante para establecer la combinación de colores para el titulo */
+    background: linear-gradient(90deg, #8B4513, #f4a26c, #8B4513);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: changeColor 5s linear infinite;
+    /* Añade un subrayado al texto */
+    position: relative;
+    overflow: hidden;
+}
+
+.text-colored::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
     width: 100%;
-    margin: 10px 0;
-  }
-  
-  .progress-bar {
-    background-color: #4caf50;
-    height: 100%;
-    transition: width 0.4s ease-in-out;
-  }
+    height: 2px;
+    background: #dd6236;
+    transform: translateX(-100%);
+    animation: underlineAnimation 2s linear infinite;
+}
+
+@keyframes underlineAnimation {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.chart--header {
+    text-align: center;
+    font-size: 1.5rem;
+    /* Cambia el orden en modo computadora */
+    margin-left: 25px;
+    margin-right: 25px;
+    font-weight: 600;
+    justify-content: center;
+}
+
+
+.chart--header p {
+    color: #2c2c2c;
+    font-weight:revert-layer-position;
+    font-size: 1.2em; /* Increase the font size */
+}
+
+
+/* Estilos del grafico y dimensionamiento */
+
+.chart--border {
+    flex-direction: column;
+    align-items: center;
+    padding: 23px;
+    /* Reducir el padding */
+    border: solid var(--primary-100);
+    border-radius: 50px;
+    margin: 1.33em auto; /* Centrar el div horizontalmente */
+    max-width: 90%; /* Ajustar el ancho del div */
+    font-size: 2em; /* Reducir el tamaño de la fuente */
+}
+
+#myChart {
+    max-height: 500px;
+    width: 100%;
+    /* Asegurar que el div ocupe todo el ancho disponible, hasta el máximo especificado */
+    margin-top: 20px; /* Añade un margen superior al gráfico */
+
+}
+
+.myHr {
+    color: #000;
+}
+
+@keyframes color-change {
+    0% {
+        color: #444040;
+    }
+    50% {
+        color: #ffd299;
+    }
+    100% {
+        color: #2c2c2c;
+    }
+}
+
+.myStrong {
+    margin-bottom: 10px; /* Agrega un espacio de separación */
+    display: block; /* Convierte el elemento en bloque para centrarlo */
+    animation: color-change 2s infinite;
+    text-align: center; /* Centra el elemento */
+    margin-top: 20px; /* Añade un margen superior */
+    font-size: 25px; /* Aumenta el tamaño de la fuente */
+}
+
+@keyframes escalar {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+.myDiv {
+    margin-bottom: 10px; /* Agrega un espacio de separación */
+    display: block; /* Convierte el elemento en bloque para centrarlo */
+    text-align: center; /* Centra el elemento */
+    font-size: 25px; /* Aumenta el tamaño de la fuente */
+}
+
+.votesText {
+    color: #8B4513; /* Cambia esto al color que desees para el texto "Votos :" */
+}
+
+.totalVotes {
+    color: #dfb630; /* Cambia esto al color que desees para el total de votos */
+    text-decoration: underline;
+    
+}
+
 
 /* para el footer */
 .pie-pagina {

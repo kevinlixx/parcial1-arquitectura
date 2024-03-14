@@ -151,3 +151,13 @@ header .menu-section {
     font-size: 20px;
     margin-top: 5%;
 }
+
+.chart--border {
+    max-width: 1000px;
+    font-size: 2em; /* Reducir el tamaño de la fuente */
+}
+
+#myChart {
+    width: 50%; /* Ancho original */
+    height: 50%; /* Alto original */
+}

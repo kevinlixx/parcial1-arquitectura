@@ -35,77 +35,79 @@
             </div>
             </a>
     </header>
+
     <!-- yazo -resultados -->
     <main>
-        <section>
-            <div class="container" style="padding:100px;">
-                <div class="row">
-                    <div class="col-sm-12" style="border:2px solid gray;">
+        <div class="div--container" id="inicio">
 
-                        <div class="page-header">
-                            <h2 class="specialHead">Nivel de Votos</h2>
-                            <p class="normalFont">Registro estadistico de la cantidad de votos por candidato</p>
-                        </div>
+        </div>
+        <!-- titulo   -->
+        <div class="div--container" id="titulo">
+            <h1 class="text-colored">Nivel de Votos</h1>
 
-                        <div class="col-sm-12">
-                            <!-- Agrega este elemento canvas donde quieras que aparezca el gráfico -->
-                            <canvas id="myChart" style="width: 50%; height: 50%;"></canvas>
-                            <?php
-                            $user = "root";
-                            $pass = "";
-                            $host = "localhost";
-                            $bd = "gapvotacion";
-
-                            // Conexión a la base de datos
-                            $conn = mysqli_connect($host, $user, $pass, $bd);
-                            if (!$conn) {
-                                echo "Hubo un fallo en la conexión.";
-                            } else {
-                                // Consulta SQL para obtener los candidatos y el número de votos
-                                $sql = "SELECT c.id, CONCAT(c.nombre, ' ', c.apellido) AS candidato, COUNT(v.id) AS votos FROM candidato c LEFT JOIN votacion v ON c.id = v.candidatoId GROUP BY c.id";
-
-                                $result = mysqli_query($conn, $sql);
-
-                                $candidatos = array();
-                                $votos = array();
-
-                                if (mysqli_num_rows($result) > 0) {
-                                    while ($row = mysqli_fetch_assoc($result)) {
-                                        $candidato = $row['candidato'];
-                                        $votos_candidato = $row['votos'];
-
-                                        array_push($candidatos, $candidato);
-                                        array_push($votos, $votos_candidato);
-
-                                        // La línea que imprime el nombre del candidato ha sido eliminada
-                                    }
-                                }
-
-                                // Consulta SQL para obtener el número total de votos
-                                $sql = "SELECT COUNT(*) AS total FROM votacion";
-                                $result = mysqli_query($conn, $sql);
-
-                                if (mysqli_num_rows($result) > 0) {
-                                    $row = mysqli_fetch_assoc($result);
-                                    $total = $row['total'];
-
-                                    echo "<hr>";
-                                    echo "<strong>Número total de Votos</strong><br>";
-                                    echo "
-  <div class='text-primary'>
-    <h3 class='normalFont'>Votos : $total </h3>
-  </div>
-  ";
-                                }
-                            }
-                            ?>
-
-                        </div>
-
-                    </div>
-                </div>
+        </div>
+        <div class="chart--border">
+            <div class="chart--header">
+                <p class="normalFont">Registro estadistico de la cantidad de votos por candidato</p>
             </div>
-        </section>
+
+            <div>
+                <!-- Agrega este elemento canvas donde quieras que aparezca el gráfico -->
+                <canvas id="myChart"></canvas>
+                <?php
+                $user = "root";
+                $pass = "";
+                $host = "localhost";
+                $bd = "gapvotacion";
+
+                // Conexión a la base de datos
+                $conn = mysqli_connect($host, $user, $pass, $bd);
+                if (!$conn) {
+                    echo "Hubo un fallo en la conexión.";
+                } else {
+                    // Consulta SQL para obtener los candidatos y el número de votos
+                    $sql = "SELECT c.id, CONCAT(c.nombre, ' ', c.apellido) AS candidato, COUNT(v.id) AS votos FROM candidato c LEFT JOIN votacion v ON c.id = v.candidatoId GROUP BY c.id";
+
+                    $result = mysqli_query($conn, $sql);
+
+                    $candidatos = array();
+                    $votos = array();
+
+                    if (mysqli_num_rows($result) > 0) {
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            $candidato = $row['candidato'];
+                            $votos_candidato = $row['votos'];
+
+                            array_push($candidatos, $candidato);
+                            array_push($votos, $votos_candidato);
+
+                            // La línea que imprime el nombre del candidato ha sido eliminada
+                        }
+                    }
+
+                    // Consulta SQL para obtener el número total de votos
+                    $sql = "SELECT COUNT(*) AS total FROM votacion";
+                    $result = mysqli_query($conn, $sql);
+
+                    if (mysqli_num_rows($result) > 0) {
+                        $row = mysqli_fetch_assoc($result);
+                        $total = $row['total'];
+
+                        echo "<hr class='myHr'>";
+                        echo "<strong class='myStrong'>Número total de Votos</strong><br>";
+                        echo "
+                        <div class='text-primary myDiv'>
+                        <h3 class='normalFont myH3'><span class='votesText'>Votos :</span> <span class='totalVotes'>$total</span></h3>
+                    </div>
+                    ";
+                    }
+                }
+                ?>
+
+            </div>
+
+        </div>
+        </div>
     </main>
     <script>
         var candidatos = <?php echo json_encode($candidatos); ?>;

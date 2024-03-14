@@ -21,6 +21,8 @@ window.onload = function () {
             }]
         },
         options: {
+            responsive: true, // Hace que la gráfica sea responsive
+            maintainAspectRatio: false, // Permite que cambies la altura de la gráfica independientemente de su ancho
             plugins: {
                 legend: {
                     display: false // Desactivar la leyenda
@@ -29,7 +31,7 @@ window.onload = function () {
                 tooltip: {
                     callbacks: {
                         // Define la función de devolución de llamada para la etiqueta del tooltip
-                        label: function (context) {
+                        label: function (context) { // En esta linea se define la función de devolución de llamada para la etiqueta del tooltip
                             var label = '';
                             // Verifica si el valor de 'y' está definido
                             if (context.parsed.y !== null) {
@@ -68,12 +70,6 @@ window.onload = function () {
                 ctx.moveTo(xAxis.left, yAxis.bottom);
                 ctx.lineTo(xAxis.right, yAxis.bottom);
                 ctx.stroke();
-               /*  ctx.save(); */
-                /* ctx.beginPath(); */
-                /* ctx.moveTo(yAxis.left, yAxis.top);
-                ctx.lineTo(yAxis.left, yAxis.bottom); */
-                /* ctx.stroke();
-                ctx.restore(); */
             }
         }]
     });
