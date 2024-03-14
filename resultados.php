@@ -12,7 +12,6 @@
 <body>
     <!--  header - kevin   -->
    <header>
-    <div></div>
     <section class="section_header">
         <figure class="figure_header">
             <img src='https://i.postimg.cc/14Ggx7Rb/logo-GAP.png' border='0' alt='logo-GAP'/>
