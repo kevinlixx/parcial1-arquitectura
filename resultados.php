@@ -81,8 +81,6 @@
 
                             array_push($candidatos, $candidato);
                             array_push($votos, $votos_candidato);
-
-                            // La línea que imprime el nombre del candidato ha sido eliminada
                         }
                     }
 
@@ -99,8 +97,35 @@
                         echo "
                         <div class='text-primary myDiv'>
                         <h3 class='normalFont myH3'><span class='votesText'>Votos :</span> <span class='totalVotes'>$total</span></h3>
-                    </div>
-                    ";
+                        </div>
+                        ";
+                    }
+
+                    // Encontrar el máximo número de votos
+                    $max_votos = max($votos);
+
+                    // Crear un array para almacenar los candidatos ganadores
+                    $ganadores = array();
+
+                    // Recorrer el array de votos
+                    for ($i = 0; $i < count($votos); $i++) {
+                        // Si el número de votos es igual al máximo, agregar el candidato correspondiente al array de ganadores
+                        if ($votos[$i] == $max_votos) {
+                            array_push($ganadores, $candidatos[$i]);
+                        }
+                    }
+
+                    // Mostrar los ganadores
+                    echo "<hr class='myHr'>";
+                    if (count($ganadores) > 1) {
+                        echo "<strong class='myStrong'>Hay un empate entre los siguientes candidatos:</strong><br>";
+                    } else {
+                        echo "<strong class='myStrong'>El candidato ganador es:</strong><br>";
+                    }
+                    foreach ($ganadores as $ganador) {
+                        echo "<div class='text-primary myDiv'>";
+                        echo "<h3 class='normalFont myH3'><span class='votesText'>Candidato :</span> <span class='totalVotes'>$ganador</span></h3>";
+                        echo "</div>";
                     }
                 }
                 ?>
