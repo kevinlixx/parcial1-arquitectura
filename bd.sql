@@ -30,10 +30,13 @@ CREATE TABLE `candidato` (
 
 -- 2.1 Insertar datos en la tabla `candidato`
 INSERT INTO `candidato` (`nombre`, `apellido`) VALUES
-('Juan', 'Perez'),
-('Maria', 'Lopez'),
-('Pedro', 'Gomez');
+('Rintaro', 'Okabe'),
+('Shinichi', 'Izumi'),
+('Pain', 'Nagato'),
+('Voto', 'en Blanco');
 
+INSERT INTO `candidato` (`nombre`) VALUES
+('Voto en Blanco');
 -- Actualizar el nombre y apellido del candidato con ID 1
 UPDATE candidato SET nombre = 'Rintaro', apellido = 'Okabe' WHERE id = 1;
 

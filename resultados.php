@@ -94,7 +94,7 @@
                         $total = $row['total'];
 
                         echo "<hr class='myHr'>";
-                        echo "<strong class='myStrong'>Número total de Votos</strong><br>";
+                        echo "<strong class='myStrong'>Cantidad total de votos</strong><br>";
                         echo "
                         <div class='text-primary myDiv'>
                         <h3 class='normalFont myH3'><span class='votesText'>Votos :</span> <span class='totalVotes'>$total</span></h3>

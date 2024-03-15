@@ -2,7 +2,7 @@ window.onload = function () {
     var ctx = document.getElementById('myChart').getContext('2d');
 
     // Define una lista de colores
-    var colors = ['#66be94', '#2f6798', '#f397ca', '#FFFF00', '#00FFFF', '#FF00FF'];
+    var colors = ['#66be94', '#2f6798', '#f397ca', '#c9e4ff'];
 
     // Asigna un color de la lista a cada candidato
     var backgroundColors = candidatos.map(function (_, i) {
