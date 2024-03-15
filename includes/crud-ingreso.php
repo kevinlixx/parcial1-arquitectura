@@ -8,9 +8,9 @@
                 $correo = $datos['correo'];
                 $contrasena = $datos['contrasena'];
                 $conection = conexion::conectar();
-                var_dump($conection);
+                /* var_dump($conection); */
                 
-                var_dump($datos ['contrasena']);
+                /* var_dump($datos ['contrasena']); */
                 $sql = "SELECT * FROM admin WHERE correo = ? and contrasena = ?";
                 $sentencia = $conection->prepare($sql);
                 $sentencia->bind_Param('ss',$datos['correo'], $datos['contrasena']);
@@ -24,7 +24,7 @@
                         }
                     }else{
                         echo "<script>alert('Usuario o contraseña incorrecto intente nuevamente')</script>";
-                        echo "<script>location.href='index.php'</script>";
+                        echo "<script>location.href='../index.php'</script>";
                     }
             } catch (Exception $e) {
                 die("Error al consultar el administrador: " . $e->getMessage());
