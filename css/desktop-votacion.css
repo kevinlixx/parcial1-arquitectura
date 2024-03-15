@@ -156,6 +156,15 @@ header .menu-section {
 }
 
 /* CSS de las cosas jejejej */
+
+main {
+    min-height: 90vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
 #titulo {
     font-size: 3rem; /* Tamaño del texto */
     text-align: center; /* Alineación centrada */
@@ -204,10 +213,7 @@ header .menu-section {
 }
 
 
-.candidato1 button,
-.candidato2 button,
-.candidato3 button,
-.candidatoblanco button {
+.input--voto {
     background-color: var(--accent-100);
     color: var(--bg-100);
     border: none;
@@ -218,10 +224,8 @@ header .menu-section {
     transition: background-color 0.3s ease;
 }
 
-.candidato1 button:hover,
-.candidato2 button:hover,
-.candidato3 button:hover,
-.candidatoblanco button:hover {
+.input--voto:hover
+{
     background-color: var(--accent-200);
     color: var(--text-100);
 }

@@ -55,5 +55,33 @@
             }
 
         }
+        public function ingresarVoto($datos){
+            try {
+                $id_candidato = $datos['id_candidato'];
+                $id_estudiante = $datos['id_estudiante'];
+                $conection = conexion::conectar();
+                $sql = "INSERT INTO votacion (candidatoId, estudianteId) VALUES (?, ?)";
+                $sentencia = $conection->prepare($sql);
+                $sentencia->bind_Param('ii', $id_candidato, $id_estudiante);
+                $sentencia->execute();
+                $consulta = "SELECT * FROM votacion WHERE candidatoId= '$id_candidato' AND estudianteId= '$id_estudiante'";
+                $consult = mysqli_query($conection, $consulta ) or die ("Error al traer los datos");
+
+                // Actualizar el estado de voto del estudiante
+                $sql = "UPDATE estudiante SET voto = TRUE WHERE id = ?";
+                $sentencia = $conection->prepare($sql);
+                $sentencia->bind_Param('i', $id_estudiante);
+                $sentencia->execute();
+                if($busqueda= mysqli_fetch_array($consult)){
+                        return iterator_to_array($consult);
+                    }
+                else{
+                    echo "<script>alert('El voto no se ha ingresado')</script>";
+                    echo "<script>location.href='../votacion.php'</script>";
+                }
+            } catch (Exception $e) {
+                die("Error al ingresar el voto: " . $e->getMessage());
+            }
+        }
     }
 ?>

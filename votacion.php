@@ -1,3 +1,7 @@
+<?php 
+$id_estudiante = $_GET['id_estudiante'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,12 +27,12 @@
                 <figcaption></figcaption>
             </figure>
             <div id="back_menu"></div>
-            <nav id="nav" class="menu-section">
+            <!-- <nav id="nav" class="menu-section">
                 <img src='https://i.postimg.cc/14Ggx7Rb/logo-GAP.png' border='0' alt='logo-GAP'/>
                 <ul>
-                    <li><a href="#iniciar-sesion">Cerrar sesión</a></li>
+                    <li><a href="">Cerrar sesión</a></li>
                 </ul>
-            </nav>
+            </nav> -->
         </div>
         </a>
 </header>
@@ -42,7 +46,13 @@
                 <div class="candidato-content">
                     <h3>Shinichi Izumi</h3>
                     <img src='https://i.postimg.cc/prqK7zCz/imagen-2024-03-14-122808308.png' border='0' alt='imagen-2024-03-14-122808308'/>
-                    <button onclick="vote('opcion1')">Votar</button>
+                    <form action="./procesos/ingreso_voto.php" method="POST">
+                        <input type="hidden" name="id_candidato" value="1">
+                        <?php
+                        echo '<input type="hidden" name="id_estudiante" value="'.$id_estudiante.'">'
+                        ?>
+                        <input type="submit" value="votar" class= "input--voto">
+                    </form>
                 </div>
             </div>
             
@@ -50,7 +60,14 @@
                 <div class="candidato-content">
                     <h3>Rintaro Okabe</h3>
                     <img src='https://i.postimg.cc/9Fz9dZTP/imagen-2024-03-10-142557607.png' border='0' alt='imagen-2024-03-10-142557607'/>
-                    <button onclick="vote('opcion2')">Votar</button>
+                    <form action="./procesos/ingreso_voto.php" method="POST">
+                        <input type="hidden" name="id_candidato" value="2">
+                        <?php
+                        echo '<input type="hidden" name="id_estudiante" value="'.$id_estudiante.'">'
+                        ?>
+                        <input type="submit" value="votar" class= "input--voto">
+                    </form>
+
                 </div>
             </div>
             
@@ -58,7 +75,13 @@
                 <div class="candidato-content">
                     <h3>Pain Nagato</h3>
                     <img src='https://i.postimg.cc/ZR78mcpR/imagen-2024-03-10-143416333.png' border='0' alt='imagen-2024-03-10-143416333'/>
-                    <button onclick="vote('opcion3')">Votar</button>
+                    <form action="./procesos/ingreso_voto.php" method="POST">
+                        <input type="hidden" name="id_candidato" value="3">
+                        <?php
+                        echo '<input type="hidden" name="id_estudiante" value="'.$id_estudiante.'">'
+                        ?>
+                        <input type="submit" value="votar" class= "input--voto">
+                    </form>
                 </div>
             </div>
             
@@ -66,7 +89,14 @@
                 <div class="candidato-content">
                     <h3>Voto en Blanco</h3>
                     <img src='https://i.postimg.cc/L4L5LT4y/imagen-2024-03-13-093707904.png' border='0' alt='imagen-2024-03-13-093707904'/>
-                    <button onclick="vote('opcion4')">Votar</button>
+
+                    <form action="./procesos/ingreso_voto.php" method="POST">   
+                        <input type="hidden" name="id_candidato" value="4">
+                        <?php
+                        echo '<input type="hidden" name="id_estudiante" value="'.$id_estudiante.'">'
+                        ?>
+                        <input type="submit" value="votar" class= "input--voto">
+                    </form>
                 </div>
             </div>
         </section>
@@ -88,10 +118,10 @@
             document.querySelector('.overlay').style.display = 'block';
             // Redirige a otra página después de 2 segundos (2000 milisegundos)
             setTimeout(function() {
-                window.location.href = 'admin.html';
+                window.location.href = './ingVotar.php';
             }, 2000);
         }
     </script>
-
+     <script src="js/script.js"></script>
 </body>
 </html>

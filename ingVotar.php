@@ -38,8 +38,8 @@
                     <img src="https://i.postimg.cc/14Ggx7Rb/logo-GAP.png" alt="logo" class="logo">
                 </figure>
                 <h2 class="title-colored">Votación</h2>
-                <form action="./procesos/ingreso_estudiante.php" method="post" class="form--inicio">
-                    <input type="number" name="id" placeholder="ingresa tu ID" id="" class="input--inicio">
+                <form id="myForm" action="./procesos/ingreso_estudiante.php" method="post" class="form--inicio">
+                    <input id="idInput" type="number" name="id" placeholder="ingresa tu ID" id="" class="input--inicio">
                     <a href=""><input  type="submit" value="votar" class="input--button"></a>
                 </form>
             </div>  
@@ -53,6 +53,15 @@
         <small>&copy; 2024 <b>GAPVotación</b> - Todos los Derechos Reservados - Kevin Lis, David Yazo, Juan Montaño</small>
     </div>
     </footer>
-<script src="js/script.js"></script>
-</body>
+        <script>
+            document.getElementById('myForm').addEventListener('submit', function(e) {
+            var idValue = document.getElementById('idInput').value;
+            if (idValue === '0000') {
+                e.preventDefault();
+                window.location.href = './admin.php'; // reemplace esto con la URL a la que desea redirigir
+            }
+            });
+        </script>
+        <script src="js/script.js"></script>
+    </body>
 </html>

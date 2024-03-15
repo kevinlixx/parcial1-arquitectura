@@ -249,10 +249,7 @@ header .menu-header {
         font-size: 1.8rem; /* Tamaño de fuente ajustado */
     }
 
-    .candidato1 button,
-    .candidato2 button,
-    .candidato3 button,
-    .candidatoblanco button {
+.input--voto{
         background-color: var(--accent-100);
         color: var(--bg-100);
         border: none;
