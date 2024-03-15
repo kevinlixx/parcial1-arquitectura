@@ -10,9 +10,9 @@
 
     $resultado = $crud->ingresarVoto($datos);
     if ($resultado){
-        echo '<script>window.location.href="../votacion.php"; alert("Voto ingresado correctamente");</script>';
+        echo '<script>window.location.href="../ingVotar.php"; alert("Voto ingresado correctamente");</script>';
     } else {
-        echo '<script>window.location.href="../votacion.php"; alert("Error al ingresar el voto");</script>';
+        echo '<script>window.location.href="../ingVotar.php"; alert("Error al ingresar el voto");</script>';
     }
 
 

@@ -29,7 +29,8 @@
                 <nav id="nav" class="menu-section">
                     <img src='https://i.postimg.cc/14Ggx7Rb/logo-GAP.png' border='0' alt='logo-GAP' />
                     <ul>
-                        <li><a href="#iniciar-sesion">Cerrar sesión</a></li>
+                        <li><a href="./admin.php">menu</a></li>
+                        <li><a href="./index.php" id = "selected">Cerrar sesión</a></li>
                     </ul>
                 </nav>
             </div>
