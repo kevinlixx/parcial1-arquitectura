@@ -151,3 +151,27 @@ header .menu-section {
     font-size: 20px;
     margin-top: 5%;
 }
+
+/*  main */
+main{
+    min-height:90vh;
+}
+#container {
+    padding: 40px 40px;
+    display: flex;
+    justify-content: center;
+    
+}
+#container > div:first-child {
+    margin-right: 60px;
+}
+
+
+
+.container-caja {
+    max-width: 100rem;
+}
+
+.caja{
+    width: 300px;
+}

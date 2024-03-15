@@ -154,5 +154,13 @@ ALTER TABLE `votacion`
   ADD CONSTRAINT `votacion_ibfk_2` FOREIGN KEY (`candidatoId`) REFERENCES `candidato` (`id`);
 COMMIT;
 
+CREATE TABLE votacion (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    estudianteId INT,
+    candidatoId INT,
+    fecha DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (estudianteId) REFERENCES estudiante(id),
+    FOREIGN KEY (candidatoId) REFERENCES candidato(id)
+);
 
 
